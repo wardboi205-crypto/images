@@ -1,0 +1,147 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0b0d17;
+  color: #f4f7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1e3a, #05060d 70%);
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8ea0ff;
+  margin: 0 0 8px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+.subhead {
+  margin: 0;
+  color: #c4cef5;
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+}
+
+.file-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  background: #121631;
+  border: 1px solid #283068;
+  border-radius: 10px;
+}
+
+.file-input input {
+  color: #c6d0ff;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #5a6dfc;
+  background: #2932b8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+.game-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 20px;
+  align-items: start;
+}
+
+canvas {
+  width: 100%;
+  background: linear-gradient(180deg, #0e132c, #04050b);
+  border: 2px solid #2b3568;
+  border-radius: 16px;
+}
+
+.hud {
+  background: #111532;
+  border: 1px solid #293268;
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.stat {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #b9c5f5;
+}
+
+.stat strong {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.health-bar {
+  width: 100%;
+  height: 10px;
+  background: #1e254f;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #3a457a;
+}
+
+.health-fill {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #4ade80, #fbbf24, #f87171);
+  transition: width 0.2s ease;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #8fa1ff;
+}
+
+@media (max-width: 900px) {
+  .game-panel {
+    grid-template-columns: 1fr;
+  }
+}
